@@ -11,6 +11,7 @@ import Order from "./pages/Order";
 import { ToastContainer } from "react-toastify";
 import { NavBar } from "./components/NavBar";
 import Footer from "./components/Footer";
+import { SearchBar } from "./pages/SearchBar";
 
 const App = () => {
   return (
@@ -24,17 +25,20 @@ const App = () => {
         }}
       />
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/collection" element={<Collection />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/place-order" element={<PlaceOrder />} />
-        <Route path="/product:productId" element={<Product />} />
-        <Route path="/order" element={<Order />} />
-      </Routes>
-      <Footer />
+      <div className="mt-28">
+        <SearchBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/collection" element={<Collection />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/place-order" element={<PlaceOrder />} />
+          <Route path="/product:productId" element={<Product />} />
+          <Route path="/order" element={<Order />} />
+        </Routes>
+        <Footer />
+      </div>
     </div>
   );
 };
